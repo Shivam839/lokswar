@@ -1,0 +1,170 @@
+/* ========================================================== */
+/*                    NAVBAR & TOPBAR STYLES                  */
+/* ========================================================== */
+
+.navbar {
+    transition: all .3s ease;
+}
+
+.navbar-nav .nav-link {
+    padding: 25px 18px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* ---- Dropdown shell ---- */
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    z-index: 1055;                     /* FIX: sits above hero/banner sections */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); /* FIX: visually separates menu from page */
+    overflow: visible;                 /* FIX: lets nested flyout escape parent bounds */
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    display: block !important;         /* override Bootstrap's display:none toggle */
+}
+
+/* FIX: open on hover for desktop, matching the nested flyout's behavior
+   (keep data-bs-toggle in the JSX as a no-JS/keyboard fallback; this just
+   makes hover the primary desktop interaction so it's consistent) */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover > .dropdown-menu,
+    .nav-item.dropdown > .dropdown-menu.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* Small bridge so the mouse can travel from the toggle into the menu */
+    .nav-item.dropdown::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 10px;
+    }
+    .nav-item.dropdown {
+        position: relative;
+    }
+}
+
+/* ---- Dropdown items ---- */
+/* FIX: target the ACTUAL classes used in the JSX (nav-item / nav-link),
+   scoped inside .dropdown-menu, instead of the unused .dropdown-item */
+.dropdown-menu .nav-link {
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    white-space: normal;               /* FIX: let long labels wrap instead of overflowing the 200px box */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Nested flyout items should still stay on one line since their box
+   auto-sizes to min-width: 180px and the labels are short */
+.nested-dropdown-menu .nav-link {
+    white-space: nowrap;
+}
+
+.dropdown-menu .nav-link:hover,
+.dropdown-menu .nav-link.active {
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+}
+
+.btn-square {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ========================================================== */
+/*                NESTED FLYOUT MENU STYLES                   */
+/* ========================================================== */
+
+.nested-dropdown {
+    position: relative !important;
+}
+
+/* FIX: display:none removes it from layout entirely by default, so it can
+   never push "Annual Reports / Legal Documents" into the normal list flow.
+   It only becomes a positioned flyout once .nested-dropdown is hovered. */
+.navbar-nav .nested-dropdown .nested-dropdown-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 100% !important;             /* flies out to the RIGHT of "Documents" */
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1060;                     /* sits above the parent dropdown-menu */
+    margin-top: 0;
+}
+
+/* FIX: scoped to :hover on .nested-dropdown itself (the "Documents" row +
+   its flyout only) — hovering elsewhere in the Resources menu (Photos,
+   Media, Blogs) does NOT trigger this */
+.navbar-nav .nested-dropdown:hover > .nested-dropdown-menu {
+    display: block !important;
+}
+
+.nested-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 10px;
+    height: 100%;
+}
+
+/* ========================================================== */
+/*                    MOBILE RESPONSIVE                       */
+/* ========================================================== */
+
+@media (max-width: 991px) {
+    .navbar {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 15px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px 0;
+    }
+
+    /* On mobile, dropdowns are click-toggled by Bootstrap's JS (.show class) */
+    .dropdown-menu {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        position: static !important;
+        display: none !important;
+        box-shadow: none;
+    }
+    .dropdown-menu.show {
+        display: block !important;
+    }
+
+    .nested-dropdown-menu {
+        position: static !important;
+        display: none !important;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        box-shadow: none;
+        padding-left: 15px !important;
+    }
+
+    .nested-dropdown:hover > .nested-dropdown-menu {
+        display: block !important;
+    }
+}
