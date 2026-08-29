@@ -15,6 +15,73 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// ===============================
+// MAINTENANCE MODE
+// ===============================
+
+
+const MAINTENANCE_MODE = true;
+
+app.use((req, res, next) => {
+  if (MAINTENANCE_MODE) {
+    return res.status(503).send(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Under Maintenance</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+          }
+
+          .maintenance {
+            background: white;
+            padding: 50px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 90%;
+          }
+
+          h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+          }
+
+          p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.6;
+          }
+        </style>
+      </head>
+
+      <body>
+        <div class="maintenance">
+          <h1>🚧</h1>
+          <h2>Website Under Maintenance</h2>
+          <p>
+            We are currently performing some maintenance.
+            Please check back shortly.
+          </p>
+        </div>
+      </body>
+      </html>
+    `);
+  }
+
+  next();
+});
+
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.hostinger.com",
   port: process.env.SMTP_PORT || 465,
