@@ -54,19 +54,19 @@ const AboutBackground = () => {
       id: 1,
       label: "Origin",
       year: "1994",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+      image: "/img/about_background/1.jpg"
     },
     {
       id: 2,
       label: "Expansion",
       year: "2000s",
-      image: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=300&q=80"
+      image: "/img/about_background/2.jpg"
     },
     {
       id: 3,
       label: "Impact",
       year: "Today",
-      image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=300&q=80"
+      image: "/img/about_background/3.jpg"
     }
   ];
 
@@ -80,8 +80,8 @@ const AboutBackground = () => {
 
           {/* Header Introduction Block */}
           <div className="row justify-content-center text-center mb-4">
-            <div className="col-lg-10">
-              <p className="lead text-muted mx-auto" style={{ maxWidth: "800px" }}>
+            <div className="col-lg-12">
+              <p className="lead text-muted mx-auto" style={{ maxWidth: "1200px" }}>
                 As its name spells, "LOK" means - People and “SWAR” means - voice, the acronym is "voice of the people". In 1994, a group of women who had survived child marriage and domestic violence came together with a shared determination: no woman should suffer in silence again. With no funding and no institutional backing, they opened their doors to survivors of gender-based violence, offering counselling, emotional support, and safe shelter from their own limited means.
               </p>
               <p className="text-muted">
@@ -94,13 +94,13 @@ const AboutBackground = () => {
           <div className="row g-4 align-items-stretch mb-5 position-relative">
 
             {/* Left Column: 3-Circle Visual Roadmap */}
-            <div className="col-lg-5 text-center position-relative">
+            <div className="col-lg-5 text-center position-relative" >
               <div
-                className="roadmap-visual p-4 rounded-4 shadow-sm bg-white d-flex flex-column align-items-center justify-content-between position-relative overflow-hidden"
+                className="roadmap-visual p-4 rounded-4 shadow-sm  d-flex flex-column align-items-center justify-content-between position-relative overflow-hidden"
                 style={{ height: "807px", border: "1px solid #eee" }}
               >
                 <span className="text-uppercase tracking-wider fw-bold text-muted small mb-2">
-                  Movement Progression
+                  Our Journey
                 </span>
 
                 {/* Vertical Visual Track with 3 Circles */}
@@ -110,14 +110,15 @@ const AboutBackground = () => {
                       <div className="d-flex flex-column align-items-center">
                         {/* Circle Container */}
                         <div
-                          className="rounded-circle shadow-sm overflow-hidden position-relative border border-3 border-white progression-circle"
+                          className="shadow-sm overflow-hidden position-relative border border-3 border-white progression-circle"
                           style={{
-                            width: "200px",
+                            width: "400px",
                             height: "200px",
                             backgroundImage: `url(${node.image})`,
                             backgroundSize: "cover",
                             backgroundPosition: "center",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            borderRadius:"5%"
                           }}
                         >
                           {/* Subtle Gradient Overlay */}
@@ -132,7 +133,7 @@ const AboutBackground = () => {
                 </div>
 
                 <div className="mt-2 pt-2 border-top w-100">
-                  <span className="fw-bold text-primary small">25+ Years of Empowering Survivors</span>
+                  <span className="fw-bold text-primary small">25+ Years of Empowering Lives</span>
                 </div>
               </div>
             </div>
@@ -143,8 +144,8 @@ const AboutBackground = () => {
                 {steps.map((item) => (
                   <div
                     key={item.step}
-                    className="card border-0 shadow-sm p-3 rounded-3 transition-all flex-grow-1 d-flex justify-content-center"
-                    style={{ borderLeft: `5px solid ${item.color}` }}
+                    className="card border-0 shadow-sm p-3 rounded-10 transition-all flex-grow-1 d-flex justify-content-center"
+                    style={{ borderLeft: `5px solid ${item.color}`, borderRadius:"20px" }}
                   >
                     <div className="d-flex align-items-center gap-3">
                       <div

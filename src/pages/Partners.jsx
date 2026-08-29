@@ -13,9 +13,9 @@ const Partners = () => {
     { name: "National Alliance of Women (NAWO)", logo: "/img/collaboration partner/National Alliance of Women (NAWO)'.png", type: "networks" },
     { name: "Grass Roots Resilience Institute (G.R.I)", logo: "/img/collaboration partner/Grass Roots Resilience Institute (G.R.I).jpg", type: "networks" },
     { name: "Jharkhand Just Transition Network - SAARTHI", logo: "/img/collaboration partner/Jharkhand Just Transition Network - SAARTHI.jpg", type: "networks" },
-    { name: "Ranchi District MID DAY MEAL Committee", logo: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&h=100&q=80", type: "members" },
-    { name: "Anti sexual Harassment Committee of WCD Jharkhand Govt", logo: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=200&h=100&q=80", type: "members" },
-    { name: "Sexual Harassment Committee of BANK OF BARODA Ranchi (District)", logo: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=200&h=100&q=80", type: "members" }
+    { name: "Ranchi District MID DAY MEAL Committee", logo: "/img/collaboration partner/mid day meal commity.jpg", type: "members" },
+    { name: "Anti sexual Harassment Committee of WCD Jharkhand Govt", logo: "/img/collaboration partner/wcd.png", type: "members" },
+    { name: "Sexual Harassment Committee of BANK OF BARODA Ranchi (District)", logo: "/img/collaboration partner/Bank-of-Baroda-Logo.png", type: "members" }
   ];
 
   // Quick segment filtering lists

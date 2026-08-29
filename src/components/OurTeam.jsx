@@ -14,8 +14,7 @@ const OurTeam = () => {
                                 <img className="img-fluid mb-4" src="/img/team_member/ashok.jpeg" alt="" />
                                 <h3>Ashok Kumar Srivastav</h3>
                                 <span>President</span>
-                                <p>
-                                    Monitoring/Evaluation of projects and activities, interview of team & recruitment                            </p>
+                             
                             </div>
 
                         </div>
@@ -26,8 +25,7 @@ const OurTeam = () => {
                                 <img className="img-fluid mb-4" src="/img/team_member/Shalini.png" alt="" />
                                 <h3>Shalini Samvedna</h3>
                                 <span>Secretary</span>
-                                <p>
-                                    M&E of projects and activities, Reporting to board members, Fund raising                            </p>
+                       
                             </div>
 
                         </div>
@@ -38,8 +36,7 @@ const OurTeam = () => {
                                 <img className="img-fluid mb-4" src="/img/team_member/Sandhya.jpeg" alt="" />
                                 <h3>Sandhya Pandey</h3>
                                 <span>Treasurer</span>
-                                <p>
-                                    Program management, community Knowledge, Finance                            </p>
+                 
                             </div>
 
                         </div>
