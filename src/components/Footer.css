@@ -1,0 +1,120 @@
+/* ========================================================== */
+/*                    FOOTER BASE STYLES                      */
+/* ========================================================== */
+
+.footer-wrapper {
+  width: 100%;
+  position: relative;
+  background-color: #111827; /* Fallback dark background */
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.footer-icon {
+  flex: 0 0 20px;
+  margin-top: 5px;
+}
+
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #3b82f6; /* Accent color on hover */
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-quick-link {
+  padding: 6px 0;
+  text-align: left;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: normal;
+}
+
+.footer-quick-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ========================================================== */
+/*                    GALLERY STYLES                          */
+/* ========================================================== */
+
+.footer-gallery-row {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.gallery-img-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.copyright-text {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========================================================== */
+/*               MOBILE SPECIFIC ADJUSTMENTS                  */
+/* ========================================================== */
+
+@media (max-width: 767px) {
+  .footer-wrapper {
+    /* Height adjusts naturally based on flex column items */
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .footer-item {
+    margin-bottom: 1rem;
+  }
+
+  /* Gallery grid adjustments for small devices */
+  .gallery-img-container {
+    aspect-ratio: 1 / 1; /* Square images on mobile for cleaner grid */
+  }
+}

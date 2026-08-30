@@ -516,9 +516,7 @@ const AboutVisionObjective = () => {
                         )}
                       </div>
 
-                      <span className="text-muted mt-2" style={{ fontSize: "11px" }}>
-                        Hover over pins or district badges to highlight locations
-                      </span>
+                  
                     </div>
                   </div>
 

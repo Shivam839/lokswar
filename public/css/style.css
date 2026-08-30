@@ -89,7 +89,7 @@
 
 .navbar .navbar-nav .nav-link {
     margin-right: 30px;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     color: var(--bs-dark);
     font-size: 18px;
     outline: none;
