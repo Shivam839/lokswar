@@ -41,9 +41,9 @@ const Header = () => {
                                 <img 
                                     src="/img/logos/lokswar_logo.png" 
                                     alt="Lokswar Logo" 
-                                    height={100} 
-                                    width={100} 
-                                    style={{ position: 'absolute', left: '20px', top: '15px', zIndex: 1000 }} 
+                                    height={110} 
+                                    width={110} 
+                                    style={{ position: 'absolute', left: '45px', top: '9px', zIndex: 1000 }} 
                                 />
                             </div>
                         </Link>
@@ -93,7 +93,7 @@ const Header = () => {
             {/* Navbar Start */}
             <div className="container-fluid bg-secondary px-0">
                 <div className="nav-bar">
-                    <nav className="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+                    <nav className="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-2">
                         <h4 className="d-lg-none m-0 text-white">Menu</h4>
                         <button 
                             type="button" 
