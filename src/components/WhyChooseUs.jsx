@@ -111,7 +111,7 @@ const WhyChooseUs = () => {
                   <div className="text-center py-5 px-4 h-100" style={{ backgroundColor: "#dbe3eb" }}>
                     <i className="fa fa-hands-helping fa-3x mb-3" style={{ color: "#07083b" }}></i>
                     <h1 className="display-5 fw-bold mb-1" style={{ color: "#07083b" }}>
-                      <Counter end={42000} start={startCounter} />
+                      <Counter end={40000} start={startCounter} />
                     </h1>
                     <span className="fw-semibold text-uppercase tracking-wider" style={{ color: "#07083b", opacity: 0.8 }}>
                       Community Member Strengthen

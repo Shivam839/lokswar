@@ -9,7 +9,7 @@ const Partners = () => {
     { name: "Jharkhand anti trafficking network (J.A.T.N)", logo: "/img/collaboration partner/Jharkhand anti trafficking network.png", type: "networks" },
     { name: "Campaign against child labour (C.A.C.L)", logo: "/img/collaboration partner/Campaign against child labour.jpg", type: "networks" },
     { name: "The Advocacy and Accountability Collaborative (TAAC HUB)", logo: "/img/collaboration partner/The Advocacy and Accountability Collaborative (TAAC HUB).jpg", type: "networks" },
-    { name: "Jharkhand Rights to Education Forum (JRTEF)", logo: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=200&h=100&q=80", type: "networks" },
+    { name: "Jharkhand Rights to Education Forum (JRTEF)", logo: "/img/collaboration partner/Jharkhand Rights to Education Forum (JRTEF).jpg", type: "networks" },
     { name: "National Alliance of Women (NAWO)", logo: "/img/collaboration partner/National Alliance of Women (NAWO)'.png", type: "networks" },
     { name: "Grass Roots Resilience Institute (G.R.I)", logo: "/img/collaboration partner/Grass Roots Resilience Institute (G.R.I).jpg", type: "networks" },
     { name: "Jharkhand Just Transition Network - SAARTHI", logo: "/img/collaboration partner/Jharkhand Just Transition Network - SAARTHI.jpg", type: "networks" },

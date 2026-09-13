@@ -18,8 +18,7 @@ const Footer = () => {
               <p className="footer-contact-item mb-3">
                 <i className="fa fa-map-marker-alt footer-icon me-3"></i>
                 <span>
-                  Near H.no- BIII–580, Dhurwa Dam Side Road, In front of Ice
-                  cream Factory Dhurwa Ranchi -834004, Jharkhand
+                  H.no- BIII–580, Dhurwa Dam Side Road, Dhurwa Ranchi -834004, Jharkhand
                 </span>
               </p>
 

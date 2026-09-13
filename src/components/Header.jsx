@@ -128,7 +128,7 @@ const Header = () => {
                                     >
                                         About
                                     </a>
-                                    <div className={`dropdown-menu bg-primary px-3 ${activeDropdown === 'about' ? 'show' : ''}`} style={{ width: "200px" }}>
+                                    <div className={`dropdown-menu bg-primary px-3 ${activeDropdown === 'about' ? 'show' : ''}`} style={{ width: "300px" }}>
                                         <NavLink to="/about/background" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Background</NavLink>
                                         <NavLink to="/about/ideology" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Ideology</NavLink>
                                         <NavLink to="/about/approach" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Approach</NavLink>
@@ -150,7 +150,7 @@ const Header = () => {
                                     >
                                         Partners
                                     </a>
-                                    <div className={`dropdown-menu bg-primary px-3 ${activeDropdown === 'partners' ? 'show' : ''}`} style={{ width: "200px" }}>
+                                    <div className={`dropdown-menu bg-primary px-3 ${activeDropdown === 'partners' ? 'show' : ''}`} style={{ width: "400px" }}>
                                         <NavLink to="/our-partners/funding-partner" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Funding Partners</NavLink>
                                         <NavLink to="/our-partners/Collaboration-and-institutional-partner" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Collaboration & Institutional Partner</NavLink>
                                     </div>

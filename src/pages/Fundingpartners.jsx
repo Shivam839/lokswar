@@ -15,7 +15,6 @@ const Fundingpartners = () => {
     { name: "Conexus Foundation (India)", logo: "/img/fundingpartners/conex.png", type: "fundingpartners" },
     { name: "Girls First Fund (USA)", logo: "/img/fundingpartners/girl-first-fund.png", type: "fundingpartners" },
     { name: "Toxics Link (India)", logo: "/img/fundingpartners/toxics-link.png", type: "fundingpartners" },
-    { name: "Oxfam India", logo: "/img/fundingpartners/oxfam.png", type: "fundingpartners" },
     { name: "Work with Dignity (India)", logo: "/img/fundingpartners/work-with-dignity.png", type: "fundingpartners" },
     { name: "Jharkhand Government", logo: "/img/fundingpartners/government-of-jharkand.png", type: "fundingpartners" }
   ];

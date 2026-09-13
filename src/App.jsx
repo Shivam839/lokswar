@@ -9,7 +9,7 @@ import Partners from './pages/Partners';
 import Projects from './pages/Projects';
 import AboutBackground from './components/AboutBackground';
 import AboutIdeology from './components/AboutIdeology';
-import AboutVisionObjective from './components/AboutVisionObjective';
+import AboutVisionObjective from './pages/AboutVisionObjective';
 import AboutTeamTable from './components/AboutTeamTable';
 import Media from './pages/Media';
 import Blogs from './pages/Blogs';
