@@ -211,7 +211,7 @@ const Header = () => {
                                     >
                                         Get Involved
                                     </a>
-                                    <div className={`dropdown-menu bg-primary px-3 ${activeDropdown === 'involved' ? 'show' : ''}`} style={{ width: "200px" }}>
+                                    <div className={`dropdown-menu bg-primary px-3 ${activeDropdown === 'involved' ? 'show' : ''}`} style={{ width: "250px" }}>
                                         <NavLink to="/get-involved/become-a-donor" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Become a Donor</NavLink>
                                         <NavLink to="/get-involved/get-full-time-opportunity" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Full Time Opportunity</NavLink>
                                         <NavLink to="/get-involved/become-a-volunteer" className={({ isActive }) => `nav-item nav-link ${isActive ? "active" : ""}`} style={{ margin: '0', padding: '5px' }} onClick={() => setIsNavOpen(false)}>Become a Volunteer</NavLink>

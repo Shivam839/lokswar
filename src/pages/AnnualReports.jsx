@@ -9,7 +9,9 @@ const annualReportsData = [
     id: 'fy-2024-25',
     categoryName: 'Annual Report',
     pdfs: [
-      { id: 'ar-2022-main', title: 'Annual Report (2022-23)', fileUrl: '/docs/ANNUAL REPORT/Annual Report (2022-23).pdf' },
+      { id: 'ar-2023-main', title: 'Annual Report (2023-24)', fileUrl: '/docs/ANNUAL REPORT/Annual Report 2023-24.pdf' },
+      { id: 'ar-2024-main', title: 'Annual Report (2024-25)', fileUrl: '/docs/ANNUAL REPORT/Annual Report 2024-25.pdf' },
+      { id: 'ar-2025-main', title: 'Annual Report (2025-26)', fileUrl: '/docs/ANNUAL REPORT/Annual Report 2025-26.pdf' },
     ]
   }
 ];
