@@ -182,7 +182,7 @@ const Header = () => {
                                             onMouseLeave={() => window.innerWidth >= 992 && setIsNestedOpen(false)}
                                         >
                                             <div 
-                                                className="nav-item nav-link d-flex align-items-center justify-content-between" 
+                                                className="nested-dropdown-toggle nav-item nav-link d-flex align-items-center justify-content-between" 
                                                 style={{ margin: '0', padding: '5px', cursor: 'pointer' }}
                                                 onClick={() => setIsNestedOpen(prev => !prev)}
                                             >

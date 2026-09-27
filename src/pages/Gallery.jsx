@@ -9,7 +9,7 @@ const folderConfig = [
   { folder: "Training & capacity building", count: 10, category: "Training & capacity building", type: "image" },
   { folder: "IEC materials", count: 3, category: "IEC materials", type: "pdf" }, // Marked as PDF
   { folder: "Events and Workshop Photos", count: 10, category: "Events and Workshop Photos", type: "image" },
-  { folder: "News Media", count: 9, category: "News Media", type: "image" }
+  { folder: "News Media", count: 15, category: "News Media", type: "image" }
 ];
 
 // Helper to generate gallery items (supports both Images and PDFs)

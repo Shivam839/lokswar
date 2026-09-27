@@ -22,7 +22,7 @@ const OurTeam = () => {
                     <div className="col-md-6 col-lg-4">
                         <div className="team-item d-flex h-100 p-4 text-center">
                             <div className="team-detail">
-                                <img className="img-fluid mb-4" src="/img/team_member/Shalini.png" alt="" style={{height:"425px"}} />
+                                <img className="img-fluid mb-4" src="/img/team_member/Shalini.png" alt=""  />
                                 <h3>Shalini Samvedna</h3>
                                 <span>Secretary</span>
                        

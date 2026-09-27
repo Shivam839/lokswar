@@ -351,6 +351,70 @@ app.post("/api/send-contact-email", async (req, res) => {
   }
 });
 
+// 5. Newsletter Subscription Email Route
+app.post("/api/send-newsletter-email", async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ success: false, message: "Email is required." });
+  }
+
+  const mailOptions = {
+    from: `"Newsletter Subscription" <${process.env.SMTP_USER}>`,
+    to: process.env.ORG_RECEIVER_EMAIL || process.env.SMTP_USER,
+    replyTo: email,
+    subject: `New Newsletter Subscriber: ${email}`,
+    html: `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }
+          .container { max-width: 600px; background: #ffffff; margin: 0 auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+          .header { background-color: #0d6efd; color: #ffffff; padding: 25px; text-align: center; }
+          .header h2 { margin: 0; font-size: 24px; }
+          .content { padding: 30px; color: #333333; }
+          .detail-card { background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 15px; margin: 20px 0; border-radius: 4px; }
+          .detail-row { margin-bottom: 8px; padding-bottom: 8px; }
+          .label { font-weight: bold; color: #4a5568; display: block; margin-bottom: 4px; }
+          .value { color: #1a202c; font-size: 16px; }
+          .footer { background-color: #edf2f7; text-align: center; padding: 15px; font-size: 12px; color: #718096; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h2>📰 New Newsletter Subscriber</h2>
+          </div>
+          <div class="content">
+            <p>Hello Team,</p>
+            <p>A new user has subscribed to receive newsletter updates from your website:</p>
+            
+            <div class="detail-card">
+              <div class="detail-row">
+                <span class="label">Subscriber Email Address:</span> 
+                <span class="value"><a href="mailto:${email}">${email}</a></span>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            Automated notification from your website Newsletter Form.
+          </div>
+        </div>
+      </body>
+      </html>
+    `,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ success: true, message: "Subscription successful!" });
+  } catch (error) {
+    console.error("SMTP Error:", error);
+    res.status(500).json({ success: false, message: "Failed to process subscription." });
+  }
+});
+
 // Serve static React build files from 'dist' directory
 app.use(express.static(path.join(__dirname, "dist")));
 

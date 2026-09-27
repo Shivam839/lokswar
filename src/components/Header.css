@@ -1,3 +1,26 @@
+/* Base Navbar link styling inside dropdowns */
+.dropdown-menu .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover and active color state for links */
+.dropdown-menu .nav-link:hover,
+.dropdown-menu .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Specific styling for the nested Documents toggle element */
+.nested-dropdown-toggle {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.nested-dropdown:hover > .nested-dropdown-toggle,
+.nested-dropdown-toggle:hover {
+    color: #ffffff !important;
+}
+
 /* Desktop Hover Flyout for Nested Items */
 @media (min-width: 992px) {
     .nested-dropdown {
@@ -9,7 +32,7 @@
         top: 0;
         left: 100%;
         min-width: 180px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     }
 }
 
