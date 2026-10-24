@@ -229,7 +229,7 @@ const Header = () => {
 
                             {/* Social Icons */}
                             <div className="d-flex ms-auto my-2 my-lg-0">
-                                <a className="btn btn-square btn-dark ms-2" href="https://www.instagram.com/lokswarjharkhand/" target="_blank" rel="noreferrer">
+                                <a className="btn btn-square btn-dark ms-2" href="https://www.instagram.com/lokswarjh?xtok=dGQxOGh2ajRtMWJ3" target="_blank" rel="noreferrer">
                                     <i className="fab fa-instagram"></i>
                                 </a>
                                 <a className="btn btn-square btn-dark ms-2" href="https://www.facebook.com/people/Lok-Swar/pfbid0asX13DdqmkSKe8kz4StyZ4CvfqAUaJK38es1X2atGT3QQ9xNinfRN4ghe7kJLfwEl/" target="_blank" rel="noreferrer">

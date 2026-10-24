@@ -52,7 +52,7 @@ const Footer = () => {
 
                 <a
                   className="btn btn-square btn-secondary social-btn"
-                  href="https://www.instagram.com/lokswarjharkhand/"
+                  href="https://www.instagram.com/lokswarjh?xtok=dGQxOGh2ajRtMWJ3"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
